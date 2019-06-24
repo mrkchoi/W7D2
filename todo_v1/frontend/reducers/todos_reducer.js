@@ -15,10 +15,52 @@ const initialState = {
   },
 };
 
+// let newTodos = [
+//   {
+//     id: 3,
+//     title: 'bake bread',
+//     body: 'with butter',
+//     done: false
+//   },
+//   {
+//     id: 4,
+//     title: 'wash fruit',
+//     body: 'with whipped cream',
+//     done: true
+//   },
+// ]
+
+// {
+//   id: 5,
+//   title: 'eat almonds',
+//   body: 'sea salt fsho',
+//   done: false
+// }
 
 
 const todosReducer = (state  = initialState, action) => {
+  Object.freeze(state);
+
   switch(action.type) {
+    case RECEIVE_TODOS:
+      let newState = {};
+      // console.log(action.todos)
+      action.todos.forEach( todo => newState[todo.id] = todo );
+      return newState;
+    case RECEIVE_TODO:
+      newState = Object.assign({}, state);
+      newState[action.todo.id] = action.todo;
+      return newState;  
+
+      // let newTodo = {};
+      // newTodo[action.todo.id] = action.todo;
+      // newState = Object.assign({}, state);
+      
+      // newState = {
+      //   ...state,
+      //   ...newTodo
+      // }
+
     default:
       return state;
   }
