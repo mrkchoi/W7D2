@@ -1,13 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-
 import configureStore from './store/store';
+import allTodos from './reducers/selectors';
+
+import Root from './components/Root';
+
 const store = configureStore();
 window.store = store;
+window.allTodos = allTodos;
 
 document.addEventListener('DOMContentLoaded', () => {
   ReactDOM.render(
-    <h2>React is working!!</h2>,
+    <Root store={store} />,
     document.getElementById('root')
   );
 });
