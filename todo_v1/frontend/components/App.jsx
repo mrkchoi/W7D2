@@ -1,7 +1,9 @@
 import React from 'react';
+import TodoListContainer from './todos/todo_list_container'
 
 const App = (props) => (
-  <h2>Todo Redux App</h2>
+  <TodoListContainer />
+  
 );
 
 export default App;
