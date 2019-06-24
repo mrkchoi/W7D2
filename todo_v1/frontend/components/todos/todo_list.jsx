@@ -1,7 +1,21 @@
 import React from 'react';
+import TodoListItem from './todo_list_item';
+import TodoForm from './todo_form';
 
-const TodoList = (props) => (
-  <h3>Todo List Kenny V1!</h3>
+
+const TodoList = ({ todos, receiveTodo }) => (
+  <div>
+    <h3>All Todos</h3>
+    <ul>
+      {todos.map(todo => <TodoListItem todo={todo} key={todo.id} />)}
+    </ul>
+
+    <p>
+      Add New Todo
+    </p> 
+
+    <TodoForm receiveTodo={receiveTodo}/>
+  </div>
 );
 
 export default TodoList;
