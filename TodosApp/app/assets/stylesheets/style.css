@@ -1,0 +1,17 @@
+
+/* GLOBAL STYLES */
+.main__container {
+  padding-top: 2rem;
+}
+
+div.item.todolist_item {
+  display: flex !important;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.close_icon {
+  cursor: pointer;
+}
+

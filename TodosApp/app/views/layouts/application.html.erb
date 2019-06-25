@@ -6,10 +6,13 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
     <%= javascript_include_tag 'application' %>
   </head>
 
-  <body>
+  <body class="ui container main__container">
+    <h1>Todo App v2</h1>
+    <br>
     <%= yield %>
   </body>
 </html>
