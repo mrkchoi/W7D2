@@ -1,9 +1,10 @@
-const thunk = ({dispatch, getState}) => (next) => (action) => {
+const thunk = ({ dispatch, getState }) => (next) => (action) => {
+  debugger
   if (typeof action === "function") {
     return action(dispatch, getState);
-  } else {
-    return next(action);
   }
+  return next(action);
 };
+
 
 export default thunk;
