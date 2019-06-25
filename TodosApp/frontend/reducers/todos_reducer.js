@@ -15,6 +15,13 @@ const initialState = {
   },
 };
 
+// {
+//   id: 10,
+//     title: 'claybar car',
+//       body: 'with clay',
+//         done: false
+// }
+
 // let newTodos = [
 //   {
 //     id: 3,

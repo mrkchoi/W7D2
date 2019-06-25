@@ -20,3 +20,6 @@ export const removeTodo = todo => ({
 window.receiveTodos = receiveTodos;
 window.receiveTodo = receiveTodo;
 window.removeTodo = removeTodo;
+
+
+// store.dispatch(receiveTodo(todo));
