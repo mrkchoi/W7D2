@@ -6,7 +6,6 @@ class TodoForm extends React.Component {
     super(props);
 
     this.state = {
-      id: 5,
       title: '',
       body: '',
       done: false
@@ -35,10 +34,18 @@ class TodoForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.setState({
-      id: uniqueId()
-    });
-    this.props.receiveTodo(this.state);
+    // this.setState({
+    //   id: uniqueId()
+    // });
+    this.props.createTodo(this.state)
+      .then(
+        () => {
+          this.setState({
+            title: '',
+            body: ''
+          })
+        }
+      );
   }
 
   render() {
